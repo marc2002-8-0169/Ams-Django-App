@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Assignment</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'delete.css'%}">
+</head>
+<body>
+
+    <!-- Delete Assignment Form -->
+    <h2>Delete Assignment</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="{{ models.assignment_id }}">Assignment ID:</label>
+        <input type="number" name="assignment_id" required><br><br>
+
+        <input type="submit" name="delete_assignment" value="Delete Assignment">
+    </form><br><br>
+    <a href="../main"><button>Go to Main Page</button></a>
+    
+</body>
+</html>
